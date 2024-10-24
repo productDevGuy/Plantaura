@@ -98,7 +98,6 @@
 .hero-nav{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-top: 80px;
 }
 
@@ -156,8 +155,8 @@
     
     .hero-con h2{
         font-weight: 100;
-        font-size: 1.5rem;
-        line-height: 39px;
+        font-size: 1.8rem;
+        line-height: 42px;
         font-family: 'Monument-Regular';
     }
     
@@ -223,7 +222,9 @@
     }
 
     .hero-nav{
+        justify-content: flex-start;
         flex-direction: column;
+        align-items: center;
         gap: 40px;
         margin-top: 40px;
     }
@@ -231,8 +232,10 @@
     .expo-con{
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        text-align: center;
         font-family: 'Aeonik-Regular';
+        gap: 30px;
     }
 
     .expo{
@@ -246,10 +249,10 @@
         letter-spacing: 1.5px;
         margin-bottom: 5px;
     }
-    
+
 
     .switch img {
-        width: 100%;
+        width: 80px;
         height: 60px;
         border: 2px solid #717B78;
         border-radius: 10px;

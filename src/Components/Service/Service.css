@@ -1,54 +1,60 @@
-.service{
+.service {
     padding: 4em 6em;
     background: #121212;
     color: #fff;
 }
 
-.service h2{
-    width: 50%;
+.service-header h2 {
+    width: 46%;
     font-family: 'Monument-Regular';
     font-weight: 100;
     font-size: 2.2rem;
-    line-height: 54px;
+    line-height: 54px;  
 }
 
-.service h2 strong{
+.service-header span {
+    font-family: 'Monument-Regular';
+    font-weight: 100;
+    font-size: 2.2rem;
+}
+
+.coloured-text {
     font-family: 'Monument-Regular';
     font-weight: 100;
     font-size: 2.2rem;
     color: #00BE7B;  
 }
 
-.service-con{
+.service-con {
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
 }
 
-.service-left{
+.service-left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-basis: 40%;
 }
 
-.service-left p{
+.service-left p {
     color: #9F9F9F;
     font-family: 'Aeonik-Bold';
 }
 
-.feat-nav{
+.feat-nav {
     display: flex;
     align-items: center;
 }
 
-.line{
+.line {
     width: 150px;
     height: 1px;
     background: #9F9F9F;
 }
 
-.line-box{
+.line-box {
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -58,7 +64,7 @@
     align-items: center;
 }
 
-.line-box::after{
+.line-box::after {
     width: 40px;
     height: 40px;
     content: '→';
@@ -71,71 +77,84 @@
     margin-top: -5px;
 }
 
-.service-right{
+.service-right {
     flex-basis: 58%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
-    grid-template-rows: repeat(2, auto); /* 2 rows */
-    gap: 40px; /* space between grid items */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 40px;
 }
 
-.service-box{
+.service-box {
     width: 100%;
     max-width: 100%;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Move down slightly */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition */
 }
 
-.service-box h4{
+.service-box.visible {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to original position */
+}
+
+.service-box h4 {
     font-size: 1.8em;
     color: #00BE7B; 
     font-family: 'Monument-Regular';
     font-weight: 100;
- 
 }
 
-.service-box p{
+.service-box p {
     font-family: 'Aeonik-Bold';
 }
 
-.service-box span{
+.service-box span {
     color: #9F9F9F;
     font-family: 'Aeonik-Regular';
     line-height: 26px;
 }
 
-@media screen and (max-width: 900px){
-    .service{
+@media screen and (max-width: 900px) {
+    .service {
         padding: 4em 1.5em;
         background: #121212;
         color: #fff;
     }
     
-    .service h2{
+    .service-header h2 {
         width: 100%;
         font-family: 'Monument-Regular';
         font-weight: 100;
-        font-size: 1.5rem;
-        line-height: 39px;
+        font-size: 1.8rem;
+        line-height: 42px;  
         text-align: center;
     }
     
-    .service h2 strong{
+    .service-header span {
         font-family: 'Monument-Regular';
-        font-size: 1.5rem;
-        line-height: 39px;
-        color: #00BE7B;  
+        font-weight: 100;
+        font-size: 1.8rem;
     }
     
-    .service-con{
+    .coloured-text {
+        font-family: 'Monument-Regular';
+        font-weight: 100;
+        font-size: 1.8rem;
+        color: #00BE7B;   
+    }
+    
+    .service-con {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         margin-top: 40px;
     }
 
-    .service-left{
+    .service-left {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -143,37 +162,34 @@
         text-align: center;
     }
 
-    .feat-nav{
+    .feat-nav {
         display: none;
     }
 
-    .service-right{
+    .service-right {
         flex-basis: 100%;
         display: flex;
         flex-direction: column;
         gap: 40px; /* space between grid items */
-        text-align:center ;
+        text-align: center;
         margin-top: 40px;
     }
     
-    .service-box h4{
+    .service-box h4 {
         font-size: 1.4em;
         color: #00BE7B; 
         font-family: 'Monument-Regular';
         font-weight: 100;    
     }
 
-    .service-box p{
+    .service-box p {
         font-family: 'Aeonik-Bold';
     }
     
-    .service-box span{
+    .service-box span {
         color: #9F9F9F;
         font-family: 'Aeonik-Regular';
         font-size: 14px;
         line-height: 24px;
     }
-    
-    
 }
-

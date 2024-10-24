@@ -1,27 +1,113 @@
-.project{
-    padding: 4em 6em;
+.project {
+    padding: 4em 0;
 }
 
+.project-header {
+    padding: 0 6em;
+    text-align: center;
+}
 
-.project h2{
+.project-header h2 {
     width: 50%;
     font-family: 'Monument-Regular';
     font-weight: 100;
     font-size: 2.2rem;
     line-height: 54px;
+    text-align: left;
 }
 
-.project h2 strong{
+.project-header span {
+    font-family: 'Monument-Regular';
+    font-weight: 100;
+    font-size: 2.2rem;
+}
+
+.coloured-text {
     font-family: 'Monument-Regular';
     font-weight: 100;
     font-size: 2.2rem;
     color: #00BE7B;  
 }
 
+.project-con {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid #ececec;
+}
 
+.project-box {
+    padding: 3em 6em;
+    border-right: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+}
 
+.project-box:last-child {
+    border-right: none;
+}
 
+.project-box p {
+    font-family: 'Aeonik-Bold';
+    margin-bottom: 10px;
+}
 
-@media screen and (max-width: 900px){
+.project-box span {
+    color: #7c7c7c;
+    font-family: 'Aeonik-Regular';
+}
 
+.project-box img {
+    width: 100%;
+    object-fit: cover;
+    margin-top: 40px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(100px); /* Move down */
+    transition: opacity 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 900px) {
+    .project-header {
+        padding: 0 1.5em;
+        text-align: center;
+    }
+
+    .project-header h2 {
+        width: 100%;
+        font-family: 'Monument-Regular';
+        font-weight: 100;
+        font-size: 1.8rem;
+        line-height: 42px;
+        text-align: center;
+    }
+
+    .project-header span {
+        font-family: 'Monument-Regular';
+        font-weight: 100;
+        font-size: 1.8rem;
+    }
+
+    .coloured-text {
+        font-family: 'Monument-Regular';
+        font-weight: 100;
+        font-size: 1.8rem;
+        color: #00BE7B;  
+    }
+
+    .project-con {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 2em;
+        text-align: center;
+    }
+
+    .project-box {
+        padding: 2em 0;
+        border-right: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .project-con {
+        grid-template-columns: 1fr;
+    }
 }
