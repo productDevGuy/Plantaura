@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;    
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Monument-Regular';
+  src: url(./Fonts/Neue-montreal/MonumentExtended-Regular.otf) format('opentype');
+}
+
+@font-face {
+  letter-spacing: 1.2px;
+  font-family: 'Aeonik-Regular';
+  src: url(./Fonts/Neue-montreal/AeonikTRIAL-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Aeonik-Bold';
+  src: url(./Fonts/Neue-montreal/AeonikTRIAL-Bold.otf) format('opentype');
+}
+
